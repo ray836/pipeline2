@@ -12,7 +12,7 @@ export class AwsCdkPipStack extends cdk.Stack {
       pipelineName: "DemoPipeline",
       synth: new ShellStep("Synth", {
         input: CodePipelineSource.gitHub("ray836/pipeline2", "main"),
-        commands: ["npm ci", "npm run build", "npx cdk synth"],
+        commands: ["npm ci", "npx cdk synth"],
       }),
     });
   }
